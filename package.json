@@ -1,0 +1,29 @@
+{
+  "name": "advanced-js-dz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha .\\test\\"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appalse/advanced-js-dz.git"
+  },
+  "keywords": [
+    "shri-2020"
+  ],
+  "author": "appalse-Natalia-Karaseva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/appalse/advanced-js-dz/issues"
+  },
+  "homepage": "https://github.com/appalse/advanced-js-dz#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1"
+  }
+}
