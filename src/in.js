@@ -18,9 +18,13 @@ console.log('value' in object); // true
 console.log('year' in object); // true
 console.log(symbol in object); // true
 
-const proxy = // реализация
+const proxy = new Proxy(object, {
+    has (target, prop) {
+        return Object.getOwnPropertyNames(target).includes(prop) || Object.getOwnPropertySymbols(target).includes(prop);
+   }
+});
 
 // с proxy
-console.log('value' in proxy) // false
+console.log('value' in proxy); // false
 console.log('year' in proxy); // true
 console.log(symbol in proxy); // true
