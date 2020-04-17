@@ -13,6 +13,9 @@ function allKeysAndSymbols (object) {
     return Array.from(result);
 }
 
+const result = allKeysAndSymbols({}) // ["constructor", "__defineGetter__", "__defineSetter__", "hasOwnProperty", ... ]
+console.log(result);
+
 module.exports = {
     allKeysAndSymbols
 }
