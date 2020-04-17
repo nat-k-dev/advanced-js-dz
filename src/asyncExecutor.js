@@ -1,7 +1,16 @@
 'use strict'
 
 function asyncExecutor (generator) {
-    // реализация
+    const iterator = generator();
+    const run = (...args) => {
+        const next = args.length > 0 ? iterator.next(...args) : iterator.next();
+        if (next.done) {
+            return next.value; // undefined
+        } else {
+            return Promise.resolve(next.value).then(run).catch(run);
+        }
+    };
+    run();
 }
 
 // тесты
@@ -19,7 +28,7 @@ function getId () {
 function getDataById (id) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            id === ID ? resolve('🍎') : reject('💥');
+            id === ID ? resolve('apple') : reject('fire'); // 🍎 💥
         }, delayMS);
     });
 }
@@ -28,8 +37,10 @@ asyncExecutor(function* () {
     console.time("Time");
 
     const id = yield getId();
+    console.log('id', id);
     const data = yield getDataById(id);
     console.log('Data', data);
 
     console.timeEnd("Time");
 });
+
