@@ -1,5 +1,7 @@
 'use strict'
 
+console.log('*** asyncExecutor function ***');
+
 function asyncExecutor (generator) {
     const iterator = generator();
     const run = (...args) => {

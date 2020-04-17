@@ -1,5 +1,7 @@
 'use strict'
 
+console.log('*** in operator ***');
+
 const proto = { value: 42 };
 const object = Object.create(proto);
 

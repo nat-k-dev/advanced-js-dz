@@ -1,5 +1,7 @@
 'use strict'
 
+console.log('*** allKeysAndSymbols function ***');
+
 function allKeysAndSymbols (object) {
     if (typeof object !== 'object') return [];
     let result = new Set([].concat(Object.getOwnPropertyNames(object), 
