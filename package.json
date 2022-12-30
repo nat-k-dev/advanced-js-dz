@@ -24,6 +24,6 @@
   "homepage": "https://github.com/appalse/advanced-js-dz#readme",
   "dependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.1.1"
+    "mocha": "^10.2.0"
   }
 }
